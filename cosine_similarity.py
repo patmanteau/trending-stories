@@ -29,7 +29,7 @@ def get_vectors(str_list, hash_threshold=500):
             text += ["random_string_a_p_w"]
             m = vectorizer.fit_transform(text)
     else:
-        vectorizer = CountVectorizer(input=text, stop_words=None)
+        vectorizer = CountVectorizer(input='content', stop_words=None)
         try:
             vectorizer.fit(text)
         except ValueError:
